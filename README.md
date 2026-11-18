@@ -1,8 +1,8 @@
 # GradPath
 
-Aplikasi perencana dan simulasi target IPK berbasis React, Vite, dan Cloudflare Workers.
+Website perencana dan simulasi target IPK berbasis React, Vite, dan Cloudflare Workers.
 
-Website live: https://web.gradpath.workers.dev
+Link: https://web.gradpath.workers.dev
 
 ## Menjalankan Secara Lokal
 
