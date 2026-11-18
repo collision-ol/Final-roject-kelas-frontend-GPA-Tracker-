@@ -1,0 +1,22 @@
+{
+  "name": "gradpath-site",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && node scripts/build-worker.mjs",
+    "preview": "node dev.mjs",
+    "deploy": "npm run build && wrangler deploy",
+    "test": "node tests/chat.test.mjs"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.5.2",
+    "vite": "^6.3.5",
+    "wrangler": "^4.163.0"
+  }
+}

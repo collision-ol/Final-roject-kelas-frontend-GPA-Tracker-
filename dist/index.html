@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <script id="themeInit">
+      try {
+        document.documentElement.dataset.theme =
+          localStorage.getItem('gradpath-theme') === 'light' ? 'light' : 'dark';
+      } catch {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    </script>
+    <meta name="theme-color" content="#030409" />
+    <title>GradPath — Rencanakan IPK-mu</title>
+    <meta name="description" content="Isi nilai, tentukan target, dan simulasikan IPK-mu." />
+    <script type="module" crossorigin src="/assets/index-LhpSNHv_.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DneeCxNF.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="/supabase.js"></script>
+  </body>
+</html>

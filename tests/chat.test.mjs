@@ -1,0 +1,48 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {database} from './local-db.mjs';
+const source=readFileSync(new URL('../dist/server/index.js',import.meta.url),'utf8');
+const {default:worker,contextFor}=await import('data:text/javascript;base64,'+Buffer.from(source+'\nexport {contextFor};').toString('base64'));
+const data=JSON.parse(readFileSync(new URL('../data.json',import.meta.url),'utf8'));
+const base={curriculum:'si2024',target:3.75,records:{c0:{selected:true,grade:'A'},c1:{selected:true,grade:'B+'}},predictions:{},extras:[],scenarios:[]};
+let context=contextFor(base);assert.equal(context.summary.gpa,3.58);assert.equal(context.summary.gradedCredits,5);assert.equal(context.summary.projected,null);
+assert.equal(context.uniform.A,Number(((17.9+4*(context.summary.totalPlanCredits-5))/context.summary.totalPlanCredits).toFixed(4)));
+const english=data.englishIds[0];const skipped=contextFor({...base,records:{...base.records,[english]:{skipped:true}}});assert.equal(skipped.summary.totalPlanCredits,context.summary.totalPlanCredits-data.courses.find(c=>c.id===english).credits);
+assert.throws(()=>contextFor({...base,records:{c0:{skipped:true}}}));
+assert.equal(contextFor({...base,records:{c0:{selected:true,grade:'C-'}}}).summary.maximum,null);
+assert.equal(contextFor({...base,records:{c0:{selected:true,grade:'C'}}}).summary.passedCredits,2);
+assert.equal(contextFor({...base,records:{c0:{selected:true,grade:'WP'}}}).summary.missingGrades,1);
+assert.equal(contextFor({...base,curriculum:'if2024',records:{}}).summary.totalPlanCredits,data.informatika.courses.reduce((s,c)=>s+c.credits,0));
+assert.throws(()=>contextFor({...base,extras:[{id:'extra-a',name:'X',credits:-2,semester:1}]}));
+const db=database(),env={DB:db};
+const req=(path,method='GET',body,headers={})=>new Request('https://gradpath.test'+path,{method,headers:{'Content-Type':'application/json',Origin:'https://gradpath.test','CF-Connecting-IP':'127.0.0.2',...headers},body:body===undefined?undefined:JSON.stringify(body)});
+assert.equal((await worker.fetch(req('/'),env)).status,200);
+assert.equal((await worker.fetch(req('/team/natanael.png'),env)).headers.get('content-type'),'image/png');
+assert.equal((await (await worker.fetch(req('/api/chat/status'),env)).json()).ready,false);
+assert.equal((await worker.fetch(req('/api/chat','POST',{consent:true,message:'Hi',plan:base}),env)).status,503);
+assert.equal((await worker.fetch(req('/api/chat','POST',{}, {Origin:'https://evil.test'}),env)).status,403);
+assert.equal((await worker.fetch(req('/api/chat/threads'),env)).status,401);
+const enabled={DB:db,GEMINI_API_KEY:'test-only-key',GEMINI_MODEL:'gemini-2.5-flash',GEMINI_FREE_TIER_CONFIRMED:'true',CHAT_GLOBAL_DAILY_LIMIT:'2'};
+let captured,providerCalls=0;
+const original=globalThis.fetch;
+globalThis.fetch=async(url,options)=>{
+ if(String(url).includes('/auth/v1/user'))return Response.json({id:options.headers.Authorization.endsWith('BBBB')?'user-b':'user-a'});
+ assert.match(String(url),/^https:\/\/generativelanguage.googleapis.com\/v1beta\/models\/gemini-2.5-flash:generateContent$/);captured=JSON.parse(options.body);providerCalls++;return Response.json({candidates:[{finishReason:'STOP',content:{parts:[{text:'Proyeksi berdasarkan data rencana Anda.'}]}}]});
+};
+try{
+ const body={consent:true,message:'IPK saya? email example@example.com NIM 105012410004',plan:{...base,email:'secret@example.com',name:'Private',gpa:4,photos:'ignored'}};
+ const answer=await worker.fetch(req('/api/chat','POST',body),enabled);assert.equal(answer.status,200);assert.equal((await answer.json()).source,'gemini');assert(!JSON.stringify(captured).includes('example@example.com'));assert(!JSON.stringify(captured).includes('105012410004'));assert(!JSON.stringify(captured).includes('Private'));assert(JSON.stringify(captured).includes('3.58'));
+ assert.equal((await worker.fetch(req('/api/chat','POST',{...body,consent:false}),enabled)).status,400);
+ assert.equal((await worker.fetch(req('/api/chat','POST',{...body,message:'x'.repeat(1201)}),enabled)).status,400);
+ await worker.fetch(req('/api/chat','POST',body),enabled);
+ assert.equal((await worker.fetch(req('/api/chat','POST',body),enabled)).status,429);assert.equal(providerCalls,2);
+ const auth={Authorization:'Bearer aaaaaaaaaaaaaaaaaaaaAAAA'},other={Authorization:'Bearer bbbbbbbbbbbbbbbbbbbbBBBB'};
+ const saved=await (await worker.fetch(req('/api/chat/threads','POST',{curriculum:'si2024',messages:[{role:'user',text:'Target saya'}]},auth),env)).json();assert(saved.id);
+ assert.equal((await (await worker.fetch(req('/api/chat/threads','GET',undefined,auth),env)).json()).threads.length,1);
+ assert.equal((await worker.fetch(req('/api/chat/threads?id='+saved.id,'GET',undefined,other),env)).status,404);
+ assert.equal((await worker.fetch(req('/api/chat/threads','POST',{id:saved.id,curriculum:'si2024',messages:[{role:'user',text:'overwrite'}]},other),env)).status,404);
+ await worker.fetch(req('/api/chat/threads?id='+saved.id,'DELETE',undefined,other),env);assert.equal((await worker.fetch(req('/api/chat/threads?id='+saved.id,'GET',undefined,auth),env)).status,200);
+ await worker.fetch(req('/api/chat/threads?id='+saved.id,'DELETE',undefined,auth),env);assert.equal((await worker.fetch(req('/api/chat/threads?id='+saved.id,'GET',undefined,auth),env)).status,404);
+ globalThis.fetch=async()=>new Response('',{status:429});assert.equal((await worker.fetch(req('/api/chat','POST',body,{'CF-Connecting-IP':'127.0.0.3'}),{...enabled,DB:database()})).status,429);
+ console.log('PASS: static assets, canonical curriculum, GPA/skip/failure rules, privacy fields, consent, limits, Gemini adapter, and account-isolated history.');
+}finally{globalThis.fetch=original;db.close();}

@@ -1,0 +1,976 @@
+{
+  "courses": [
+    {
+      "id": "c0",
+      "semester": 1,
+      "code": "UNKL111",
+      "name": "The Exemplary Living of Jesus I",
+      "credits": 2,
+      "elective": false
+    },
+    {
+      "id": "c1",
+      "semester": 1,
+      "code": "ISCS 1X1",
+      "name": "Introduction to Computational Thinking",
+      "credits": 3,
+      "elective": false
+    },
+    {
+      "id": "c2",
+      "semester": 1,
+      "code": "SIMB161",
+      "name": "Business Management",
+      "credits": 3,
+      "elective": false
+    },
+    {
+      "id": "c3",
+      "semester": 1,
+      "code": "SISW111",
+      "name": "Computer Programming",
+      "credits": 6,
+      "elective": false
+    },
+    {
+      "id": "c4",
+      "semester": 1,
+      "code": "UNKL121",
+      "name": "Pre-Elementary English",
+      "credits": 3,
+      "elective": false
+    },
+    {
+      "id": "c5",
+      "semester": 2,
+      "code": "UNKL122",
+      "name": "Elementary English",
+      "credits": 3,
+      "elective": false
+    },
+    {
+      "id": "c6",
+      "semester": 2,
+      "code": "UNKL113",
+      "name": "Philosophy of Christian Education",
+      "credits": 2,
+      "elective": false
+    },
+    {
+      "id": "c7",
+      "semester": 2,
+      "code": "UNKL020",
+      "name": "The Exemplary Living II",
+      "credits": 2,
+      "elective": false
+    },
+    {
+      "id": "c8",
+      "semester": 2,
+      "code": "SIMS282",
+      "name": "Discrete Mathematics",
+      "credits": 3,
+      "elective": false
+    },
+    {
+      "id": "c9",
+      "semester": 2,
+      "code": "SIBP121",
+      "name": "Introduction to Financial Accounting",
+      "credits": 3,
+      "elective": false
+    },
+    {
+      "id": "c10",
+      "semester": 2,
+      "code": "SITN271",
+      "name": "Computer Network",
+      "credits": 3,
+      "elective": false
+    },
+    {
+      "id": "c11",
+      "semester": 2,
+      "code": "SISW112",
+      "name": "Data Structure and Algorithms",
+      "credits": 3,
+      "elective": false
+    },
+    {
+      "id": "c12",
+      "semester": 3,
+      "code": "UNKL221",
+      "name": "Pre-Intermediate English I",
+      "credits": 3,
+      "elective": false
+    },
+    {
+      "id": "c13",
+      "semester": 3,
+      "code": "UNKL211",
+      "name": "The Principles of Christian Values",
+      "credits": 2,
+      "elective": false
+    },
+    {
+      "id": "c14",
+      "semester": 3,
+      "code": "UKWN103",
+      "name": "Indonesian Civics",
+      "credits": 2,
+      "elective": false
+    },
+    {
+      "id": "c15",
+      "semester": 3,
+      "code": "SIMB262",
+      "name": "Management Information System",
+      "credits": 3,
+      "elective": false
+    },
+    {
+      "id": "c16",
+      "semester": 3,
+      "code": "SISW214",
+      "name": "Web Design",
+      "credits": 3,
+      "elective": false
+    },
+    {
+      "id": "c17",
+      "semester": 3,
+      "code": "SIDI232",
+      "name": "Introduction to Database",
+      "credits": 3,
+      "elective": false
+    },
+    {
+      "id": "c18",
+      "semester": 3,
+      "code": "SIMS283",
+      "name": "Statistics and Probability",
+      "credits": 3,
+      "elective": false
+    },
+    {
+      "id": "c19",
+      "semester": 3,
+      "code": "UKWN102",
+      "name": "Pancasila",
+      "credits": 2,
+      "elective": false
+    },
+    {
+      "id": "c20",
+      "semester": 4,
+      "code": "UNKL222",
+      "name": "Pre-Intermediate English II",
+      "credits": 3,
+      "elective": false
+    },
+    {
+      "id": "c21",
+      "semester": 4,
+      "code": "UNKL212",
+      "name": "Youth and the World",
+      "credits": 2,
+      "elective": false
+    },
+    {
+      "id": "c22",
+      "semester": 4,
+      "code": "SIDI233",
+      "name": "Database Management System",
+      "credits": 3,
+      "elective": false
+    },
+    {
+      "id": "c23",
+      "semester": 4,
+      "code": "SIIE241",
+      "name": "Entrepreneur - Project Capstone",
+      "credits": 3,
+      "elective": false
+    },
+    {
+      "id": "c24",
+      "semester": 4,
+      "code": "SISW213",
+      "name": "Object Oriented Programming",
+      "credits": 3,
+      "elective": false
+    },
+    {
+      "id": "c25",
+      "semester": 4,
+      "code": "SIRE251",
+      "name": "Computer Ethics and Profession",
+      "credits": 3,
+      "elective": false
+    },
+    {
+      "id": "c26",
+      "semester": 4,
+      "code": "UKWN101",
+      "name": "Indonesian language",
+      "credits": 2,
+      "elective": false
+    },
+    {
+      "id": "c27",
+      "semester": 5,
+      "code": "UNKL311",
+      "name": "Family Living",
+      "credits": 2,
+      "elective": false
+    },
+    {
+      "id": "c28",
+      "semester": 5,
+      "code": "SISW315",
+      "name": "Front-End Web Development",
+      "credits": 3,
+      "elective": false
+    },
+    {
+      "id": "c29",
+      "semester": 5,
+      "code": "SIBP222",
+      "name": "System Analysis and Design",
+      "credits": 3,
+      "elective": false
+    },
+    {
+      "id": "c30",
+      "semester": 5,
+      "code": "SITN372",
+      "name": "Information System Security",
+      "credits": 3,
+      "elective": false
+    },
+    {
+      "id": "c31",
+      "semester": 5,
+      "code": "SIDI334",
+      "name": "Data Mining and Warehousing",
+      "credits": 3,
+      "elective": false
+    },
+    {
+      "id": "c32",
+      "semester": 5,
+      "code": "SIBP323",
+      "name": "Business Process Reengineering",
+      "credits": 3,
+      "elective": false
+    },
+    {
+      "id": "c33",
+      "semester": 5,
+      "code": "SIRE353",
+      "name": "Research Method and Scientific Writing",
+      "credits": 3,
+      "elective": false
+    },
+    {
+      "id": "c34",
+      "semester": 6,
+      "code": "UNKL312",
+      "name": "End Time Living",
+      "credits": 2,
+      "elective": false
+    },
+    {
+      "id": "c35",
+      "semester": 6,
+      "code": "SISW316",
+      "name": "Mobile Application Development",
+      "credits": 3,
+      "elective": false
+    },
+    {
+      "id": "c36",
+      "semester": 6,
+      "code": "SIBP324",
+      "name": "Human and Computer Interaction",
+      "credits": 3,
+      "elective": false
+    },
+    {
+      "id": "c37",
+      "semester": 6,
+      "code": "SIDI335",
+      "name": "Data Visualization",
+      "credits": 3,
+      "elective": false
+    },
+    {
+      "id": "c38",
+      "semester": 6,
+      "code": "SIMB363",
+      "name": "Information Technology Project Management",
+      "credits": 3,
+      "elective": false
+    },
+    {
+      "id": "c39",
+      "semester": 6,
+      "code": "SIIE342",
+      "name": "Electronic Business (E-Business)",
+      "credits": 3,
+      "elective": false
+    },
+    {
+      "id": "c40",
+      "semester": 6,
+      "code": "SIDI336",
+      "name": "Business Intelligence and Analytics",
+      "credits": 3,
+      "elective": false
+    },
+    {
+      "id": "c41",
+      "semester": 7,
+      "code": "SIRE454",
+      "name": "Research Project I",
+      "credits": 3,
+      "elective": false
+    },
+    {
+      "id": "c42",
+      "semester": 7,
+      "code": "SIMB464",
+      "name": "Organization Behavior",
+      "credits": 2,
+      "elective": false
+    },
+    {
+      "id": "c43",
+      "semester": 7,
+      "code": "SIDI437",
+      "name": "Knowledge Management",
+      "credits": 3,
+      "elective": false
+    },
+    {
+      "id": "c44",
+      "semester": 7,
+      "code": "SITN475",
+      "name": "UI and UX Design",
+      "credits": 3,
+      "elective": false
+    },
+    {
+      "id": "c45",
+      "semester": 7,
+      "code": "SITN473",
+      "name": "Information Technology Governance",
+      "credits": 3,
+      "elective": false
+    },
+    {
+      "id": "c46",
+      "semester": 7,
+      "code": "ELECTIVE",
+      "name": "Elective 1",
+      "credits": 3,
+      "elective": true
+    },
+    {
+      "id": "c47",
+      "semester": 7,
+      "code": "ELECTIVE",
+      "name": "Elective 2",
+      "credits": 3,
+      "elective": true
+    },
+    {
+      "id": "c48",
+      "semester": 8,
+      "code": "SIRE455",
+      "name": "Research Project II",
+      "credits": 3,
+      "elective": false
+    },
+    {
+      "id": "c49",
+      "semester": 8,
+      "code": "SIBP428",
+      "name": "Information System Audit",
+      "credits": 3,
+      "elective": false
+    },
+    {
+      "id": "c50",
+      "semester": 8,
+      "code": "SIDI438",
+      "name": "Decision Support System",
+      "credits": 3,
+      "elective": false
+    },
+    {
+      "id": "c51",
+      "semester": 8,
+      "code": "SIBP425",
+      "name": "Enterprise Resource Planning System",
+      "credits": 3,
+      "elective": false
+    },
+    {
+      "id": "c52",
+      "semester": 8,
+      "code": "ELECTIVE",
+      "name": "Elective 1",
+      "credits": 3,
+      "elective": true
+    },
+    {
+      "id": "c53",
+      "semester": 8,
+      "code": "ELECTIVE",
+      "name": "Elective 2",
+      "credits": 3,
+      "elective": true
+    }
+  ],
+  "electives": [
+    {
+      "code": "SIMB467",
+      "name": "Risk Management"
+    },
+    {
+      "code": "SITN474",
+      "name": "IT Service Management"
+    },
+    {
+      "code": "SIMB468",
+      "name": "Business Continuity Management"
+    },
+    {
+      "code": "SIMB466",
+      "name": "Change Management"
+    },
+    {
+      "code": "SIIE443",
+      "name": "Digital Marketing Strategies"
+    },
+    {
+      "code": "SIBP426",
+      "name": "Advertising"
+    },
+    {
+      "code": "SIIE447",
+      "name": "Social Media Campaign and Analytics"
+    },
+    {
+      "code": "SIIE445",
+      "name": "Monetizing Innovation"
+    },
+    {
+      "code": "SIIE446",
+      "name": "Innovation and Entrepreneurship"
+    },
+    {
+      "code": "SIIE444",
+      "name": "Launching New Ventures"
+    },
+    {
+      "code": "SIMB465",
+      "name": "Business Development Strategies"
+    },
+    {
+      "code": "SIBP427",
+      "name": "Venture Capital"
+    }
+  ],
+  "englishIds": [
+    "c4",
+    "c5",
+    "c12",
+    "c20"
+  ],
+  "informatika": {
+    "courses": [
+      {
+        "id": "if0",
+        "semester": 1,
+        "code": "UNKL101",
+        "name": "The Exemplary Living I",
+        "credits": 2,
+        "elective": false
+      },
+      {
+        "id": "if1",
+        "semester": 1,
+        "code": "IFKV131",
+        "name": "Introduction to Computational Thinking",
+        "credits": 3,
+        "elective": false
+      },
+      {
+        "id": "if2",
+        "semester": 1,
+        "code": "IFAP171",
+        "name": "Introduction to Programming",
+        "credits": 6,
+        "elective": false
+      },
+      {
+        "id": "if3",
+        "semester": 1,
+        "code": "IFPT181",
+        "name": "Fundamentals of Linear Algebra",
+        "credits": 3,
+        "elective": false
+      },
+      {
+        "id": "if4",
+        "semester": 1,
+        "code": "UNKL201",
+        "name": "Pre-Elementary English",
+        "credits": 3,
+        "elective": false
+      },
+      {
+        "id": "if5",
+        "semester": 1,
+        "code": "UKWN102",
+        "name": "Pancasila Education",
+        "credits": 2,
+        "elective": false
+      },
+      {
+        "id": "if6",
+        "semester": 2,
+        "code": "UNKL107",
+        "name": "Philosophy of Christian Education",
+        "credits": 2,
+        "elective": false
+      },
+      {
+        "id": "if7",
+        "semester": 2,
+        "code": "UNKL102",
+        "name": "The Exemplary Living II",
+        "credits": 2,
+        "elective": false
+      },
+      {
+        "id": "if8",
+        "semester": 2,
+        "code": "IFPT182",
+        "name": "Discrete Mathematics",
+        "credits": 3,
+        "elective": false
+      },
+      {
+        "id": "if9",
+        "semester": 2,
+        "code": "IFPT186",
+        "name": "Informatics Logic",
+        "credits": 3,
+        "elective": false
+      },
+      {
+        "id": "if10",
+        "semester": 2,
+        "code": "IFAP172",
+        "name": "Data Structure and Algorithms",
+        "credits": 3,
+        "elective": false
+      },
+      {
+        "id": "if11",
+        "semester": 2,
+        "code": "UNKL202",
+        "name": "Elementary English",
+        "credits": 3,
+        "elective": false
+      },
+      {
+        "id": "if12",
+        "semester": 2,
+        "code": "UKWN103",
+        "name": "Indonesian Civics",
+        "credits": 2,
+        "elective": false
+      },
+      {
+        "id": "if13",
+        "semester": 2,
+        "code": "UKWN101",
+        "name": "Indonesian Language",
+        "credits": 2,
+        "elective": false
+      },
+      {
+        "id": "if14",
+        "semester": 3,
+        "code": "UNKL103",
+        "name": "The Principles of Christian Values",
+        "credits": 2,
+        "elective": false
+      },
+      {
+        "id": "if15",
+        "semester": 3,
+        "code": "IFAK261",
+        "name": "Computer Organization and Architecture",
+        "credits": 3,
+        "elective": false
+      },
+      {
+        "id": "if16",
+        "semester": 3,
+        "code": "IFMI251",
+        "name": "Introduction to Database",
+        "credits": 3,
+        "elective": false
+      },
+      {
+        "id": "if17",
+        "semester": 3,
+        "code": "IFPT281",
+        "name": "Statistics and Probability",
+        "credits": 3,
+        "elective": false
+      },
+      {
+        "id": "if18",
+        "semester": 3,
+        "code": "IFGI241",
+        "name": "Web Design",
+        "credits": 3,
+        "elective": false
+      },
+      {
+        "id": "if19",
+        "semester": 3,
+        "code": "UNKL203",
+        "name": "Pre-Intermediate English I",
+        "credits": 3,
+        "elective": false
+      },
+      {
+        "id": "if20",
+        "semester": 3,
+        "code": "IFPT283",
+        "name": "Calculus",
+        "credits": 3,
+        "elective": false
+      },
+      {
+        "id": "if21",
+        "semester": 4,
+        "code": "UNKL104",
+        "name": "Youth and the World",
+        "credits": 2,
+        "elective": false
+      },
+      {
+        "id": "if22",
+        "semester": 4,
+        "code": "IFAK262",
+        "name": "Computer Network I",
+        "credits": 3,
+        "elective": false
+      },
+      {
+        "id": "if23",
+        "semester": 4,
+        "code": "IFKV232",
+        "name": "Expert System",
+        "credits": 3,
+        "elective": false
+      },
+      {
+        "id": "if24",
+        "semester": 4,
+        "code": "IFAP272",
+        "name": "Automata and Compilation Techniques",
+        "credits": 3,
+        "elective": false
+      },
+      {
+        "id": "if25",
+        "semester": 4,
+        "code": "IFMI252",
+        "name": "Database Management System",
+        "credits": 3,
+        "elective": false
+      },
+      {
+        "id": "if26",
+        "semester": 4,
+        "code": "IFAP274",
+        "name": "Object Oriented Programming",
+        "credits": 3,
+        "elective": false
+      },
+      {
+        "id": "if27",
+        "semester": 4,
+        "code": "UNKL204",
+        "name": "Pre-Intermediate English II",
+        "credits": 3,
+        "elective": false
+      },
+      {
+        "id": "if28",
+        "semester": 5,
+        "code": "UNKL205",
+        "name": "Family Living",
+        "credits": 2,
+        "elective": false
+      },
+      {
+        "id": "if29",
+        "semester": 5,
+        "code": "IFAK361",
+        "name": "Computer Network II",
+        "credits": 3,
+        "elective": false
+      },
+      {
+        "id": "if30",
+        "semester": 5,
+        "code": "IFRL313",
+        "name": "Research Method",
+        "credits": 3,
+        "elective": false
+      },
+      {
+        "id": "if31",
+        "semester": 5,
+        "code": "IFMI351",
+        "name": "Front-End Web Development",
+        "credits": 3,
+        "elective": false
+      },
+      {
+        "id": "if32",
+        "semester": 5,
+        "code": "IFRL311",
+        "name": "System Analysis and Design",
+        "credits": 3,
+        "elective": false
+      },
+      {
+        "id": "if33",
+        "semester": 5,
+        "code": "IFKJ321",
+        "name": "Operating System Concept",
+        "credits": 3,
+        "elective": false
+      },
+      {
+        "id": "if34",
+        "semester": 5,
+        "code": "IFGI341",
+        "name": "Human and Computer Interaction",
+        "credits": 3,
+        "elective": false
+      },
+      {
+        "id": "if35",
+        "semester": 6,
+        "code": "UNKL106",
+        "name": "End Time Living",
+        "credits": 2,
+        "elective": false
+      },
+      {
+        "id": "if36",
+        "semester": 6,
+        "code": "IFGI342",
+        "name": "Computer Graphics",
+        "credits": 3,
+        "elective": false
+      },
+      {
+        "id": "if37",
+        "semester": 6,
+        "code": "IFMI352",
+        "name": "Back-End Web Development",
+        "credits": 3,
+        "elective": false
+      },
+      {
+        "id": "if38",
+        "semester": 6,
+        "code": "IFKV332",
+        "name": "Artificial Intelligence",
+        "credits": 3,
+        "elective": false
+      },
+      {
+        "id": "if39",
+        "semester": 6,
+        "code": "IFRL312",
+        "name": "Software Engineering",
+        "credits": 3,
+        "elective": false
+      },
+      {
+        "id": "if40",
+        "semester": 6,
+        "code": "IFRL314",
+        "name": "Mobile Application Development",
+        "credits": 3,
+        "elective": false
+      },
+      {
+        "id": "if41",
+        "semester": 6,
+        "code": "IFAP372",
+        "name": "Visual Programming",
+        "credits": 3,
+        "elective": false
+      },
+      {
+        "id": "if42",
+        "semester": 7,
+        "code": "IFRL411",
+        "name": "Research Project I",
+        "credits": 3,
+        "elective": false
+      },
+      {
+        "id": "if43",
+        "semester": 7,
+        "code": "IFMI451",
+        "name": "Computer Ethics",
+        "credits": 2,
+        "elective": false
+      },
+      {
+        "id": "if44",
+        "semester": 7,
+        "code": "IFGI441",
+        "name": "Introduction to Game Development",
+        "credits": 3,
+        "elective": false
+      },
+      {
+        "id": "if45",
+        "semester": 7,
+        "code": "IFAP471",
+        "name": "System Programming",
+        "credits": 3,
+        "elective": false
+      },
+      {
+        "id": "if46",
+        "semester": 7,
+        "code": "IFKV531",
+        "name": "Data Mining and Warehousing",
+        "credits": 3,
+        "elective": false
+      },
+      {
+        "id": "if47",
+        "semester": 7,
+        "code": "ELECTIVE",
+        "name": "Elective I",
+        "credits": 3,
+        "elective": true
+      },
+      {
+        "id": "if48",
+        "semester": 8,
+        "code": "IFRL412",
+        "name": "Research Project II",
+        "credits": 3,
+        "elective": false
+      },
+      {
+        "id": "if49",
+        "semester": 8,
+        "code": "IFKV432",
+        "name": "Robotics",
+        "credits": 3,
+        "elective": false
+      },
+      {
+        "id": "if50",
+        "semester": 8,
+        "code": "IFMI452",
+        "name": "Entrepreneur - Project Capstone",
+        "credits": 3,
+        "elective": false
+      },
+      {
+        "id": "if51",
+        "semester": 8,
+        "code": "ELECTIVE",
+        "name": "Elective I",
+        "credits": 3,
+        "elective": true
+      },
+      {
+        "id": "if52",
+        "semester": 8,
+        "code": "ELECTIVE",
+        "name": "Elective II",
+        "credits": 3,
+        "elective": true
+      }
+    ],
+    "electives": [
+      {
+        "code": "IFGI541",
+        "name": "Design for Visualization and Communication"
+      },
+      {
+        "code": "IFGI543",
+        "name": "Introduction to Animation"
+      },
+      {
+        "code": "IF4192",
+        "name": "Principles of Creative Design"
+      },
+      {
+        "code": "IFKV532",
+        "name": "Natural Language Processing"
+      },
+      {
+        "code": "IFKV533",
+        "name": "Machine Learning"
+      },
+      {
+        "code": "IFKV534",
+        "name": "Information Retrieval"
+      },
+      {
+        "code": "IFRL511",
+        "name": "DevOps Engineering"
+      },
+      {
+        "code": "IFRL512",
+        "name": "Project Management"
+      },
+      {
+        "code": "IFRL513",
+        "name": "Software Verification and Validation"
+      },
+      {
+        "code": "IFKV535",
+        "name": "Computer Vision"
+      },
+      {
+        "code": "IFAK561",
+        "name": "Computer Security"
+      },
+      {
+        "code": "IFKJ521",
+        "name": "Internet of Things"
+      }
+    ],
+    "englishIds": [
+      "if4",
+      "if11",
+      "if19",
+      "if27"
+    ]
+  }
+}
