@@ -22,7 +22,7 @@ export function ChatWidget({
   isOpen,
   onToggleOpen,
 }) {
-  const isVisible = ['review', 'target', 'result'].includes(state.step);
+  const isVisible = state.step === 'result';
   const owner = cloudUser?.id || null;
   const scope = `${owner || 'guest'}:${state.curriculum}:${accountContext?.id || 'draft'}`;
   const sessionKey = `gradpath-chat-v1:${scope}`;

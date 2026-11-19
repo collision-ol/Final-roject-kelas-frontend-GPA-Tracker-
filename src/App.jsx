@@ -35,7 +35,7 @@ export default function App() {
   const { state, setState, go, invalidateState, persistGuest } = store;
   const activeStep = resolveAllowedStep(state.step, state);
   const showKaprodi = Boolean(account.cloudUser && account.userRole === 'kaprodi');
-  const isChatVisible = !showKaprodi && ['review', 'target', 'result'].includes(activeStep);
+  const isChatVisible = !showKaprodi && activeStep === 'result';
   const [chatOpen, setChatOpen] = useState(() => window.innerWidth >= 1024);
 
   useEffect(() => {
