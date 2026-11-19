@@ -214,7 +214,7 @@ export function EnglishPage({
         }
       />
       <section className="english">
-        <p className="intro">Pilih kelas yang sudah atau akan kamu ambil.</p>
+        <p className="intro">Pilih kelas yang sudah kamu ambil.</p>
 
         <div id="englishList">
           {baseCourses.map(renderEnglishRow)}
